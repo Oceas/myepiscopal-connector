@@ -17,7 +17,8 @@
 
 namespace My_Episcopal_Collector;
 
-use My_Episcopal_Collector\includes\Votd as Votd;
+use My_Episcopal_Collector\Services\Votd as Votd;
+use My_Episcopal_Connector\Services\Cow;
 
 /**
  * Main initiation class.
@@ -122,7 +123,8 @@ final class MyEpiscopal_Collector {
 	 * @author Scott Anderson <scott@getcodesmart.com>
 	 */
 	public function includes() {
-		include $this->path . 'includes/myep-votd.php';
+		include $this->path . 'src/services/myep-votd.php';
+		include $this->path . 'src/services/myep-cow.php';
 	}
 
 	/**
@@ -133,6 +135,7 @@ final class MyEpiscopal_Collector {
 	 */
 	public function plugin_classes() {
 		new Votd();
+		new Cow();
 	}
 
 }
