@@ -123,8 +123,8 @@ final class MyEpiscopal_Collector {
 	 * @author Scott Anderson <scott@getcodesmart.com>
 	 */
 	public function includes() {
-		include $this->path . 'src/services/myep-votd.php';
-		include $this->path . 'src/services/myep-cow.php';
+		include $this->path . 'src/Shortcodes/myep-votd.php';
+		include $this->path . 'src/Shortcodes/myep-cow.php';
 	}
 
 	/**
